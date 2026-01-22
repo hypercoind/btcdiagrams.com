@@ -105,8 +105,12 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
       {/* Explanation boxes */}
       <g transform="translate(50, 310)">
         <rect x="0" y="0" width="220" height="100" rx="6" className="fill-accent stroke-bitcoin" strokeWidth="2" />
-        <text x="110" y="25" textAnchor="middle" className="fill-bitcoin text-sm font-bold">
-          🔗 The Chain
+        {/* Chain link icon */}
+        <g transform="translate(62, 12)">
+          <path d="M4 3H2C0.9 3 0 3.9 0 5s.9 2 2 2h2M6 3h2c1.1 0 2 .9 2 2s-.9 2-2 2H6M3 5h4" className="stroke-bitcoin" fill="none" strokeWidth="1.5" strokeLinecap="round" />
+        </g>
+        <text x="118" y="25" textAnchor="middle" className="fill-bitcoin text-sm font-bold">
+          The Chain
         </text>
         <text x="110" y="50" textAnchor="middle" className="fill-foreground text-xs">
           Each block contains the hash
@@ -121,8 +125,13 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
 
       <g transform="translate(290, 310)">
         <rect x="0" y="0" width="220" height="100" rx="6" className="fill-muted stroke-border" strokeWidth="2" />
-        <text x="110" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
-          🔒 Immutability
+        {/* Lock icon */}
+        <g transform="translate(52, 12)">
+          <rect x="1" y="4" width="8" height="6" rx="1" className="stroke-foreground" fill="none" strokeWidth="1.2" />
+          <path d="M3 4V2.5C3 1.1 4 0 5 0s2 1.1 2 2.5V4" className="stroke-foreground" fill="none" strokeWidth="1.2" strokeLinecap="round" />
+        </g>
+        <text x="118" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
+          Immutability
         </text>
         <text x="110" y="50" textAnchor="middle" className="fill-foreground text-xs">
           Changing any block would
@@ -137,8 +146,12 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
 
       <g transform="translate(530, 310)">
         <rect x="0" y="0" width="220" height="100" rx="6" className="fill-muted stroke-border" strokeWidth="2" />
-        <text x="110" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
-          ⛏️ Mining
+        {/* Pickaxe icon */}
+        <g transform="translate(68, 12)">
+          <path d="M1 9L5 5M5 5L9 1M7 1L9 3M5 1L3 3" className="stroke-foreground" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+        <text x="118" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
+          Mining
         </text>
         <text x="110" y="50" textAnchor="middle" className="fill-foreground text-xs">
           Miners compete to find a

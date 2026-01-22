@@ -26,7 +26,7 @@ export function SupplySchedule({ className = '' }: DiagramComponentProps) {
       {/* Y-axis labels */}
       <text x="90" y="85" textAnchor="end" className="fill-muted-foreground text-xs">21M</text>
       <text x="90" y="155" textAnchor="end" className="fill-muted-foreground text-xs">15.75M</text>
-      <text x="90" y="225" textAnchor="end" className="fill-muted-foreground text-xs">10.5M</text>
+      <text x="90" y="230" textAnchor="end" className="fill-muted-foreground text-xs">10.5M</text>
       <text x="90" y="305" textAnchor="end" className="fill-muted-foreground text-xs">5.25M</text>
       <text x="90" y="375" textAnchor="end" className="fill-muted-foreground text-xs">0</text>
 

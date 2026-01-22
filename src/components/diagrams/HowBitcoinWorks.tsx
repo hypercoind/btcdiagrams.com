@@ -85,7 +85,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
 
       {/* Receiver */}
       <g transform="translate(670, 120)">
-        <circle cx="50" cy="50" r="45" className="fill-green-500/20 stroke-green-500" strokeWidth="2" />
+        <circle cx="50" cy="50" r="45" className="fill-secondary/20 stroke-secondary" strokeWidth="2" />
         <text x="50" y="45" textAnchor="middle" className="fill-foreground text-sm font-semibold">
           Bob
         </text>

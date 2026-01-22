@@ -35,7 +35,8 @@ export function TransactionLifecycleThumbnail({ className = '' }: ThumbnailCompo
 
       <g transform="translate(160, 35)">
         <circle cx="20" cy="20" r="15" className="fill-green-600/20 stroke-green-600" strokeWidth="2" />
-        <text x="20" y="24" textAnchor="middle" className="fill-green-600 dark:fill-green-400 text-xs font-bold">✓</text>
+        {/* Checkmark icon */}
+        <path d="M14 20l4 4 8-9" className="stroke-green-600 dark:stroke-green-400" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       </g>
 
       <text x="40" y="85" textAnchor="middle" className="fill-muted-foreground text-xs">Create</text>

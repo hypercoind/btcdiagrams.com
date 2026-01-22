@@ -76,7 +76,11 @@ export function TransactionLifecycle({ className = '' }: DiagramComponentProps) 
 
         <text x="60" y="140" textAnchor="middle" className="fill-foreground text-xs">Waits in</text>
         <text x="60" y="155" textAnchor="middle" className="fill-foreground text-xs">pending pool</text>
-        <text x="60" y="170" textAnchor="middle" className="fill-foreground text-xs">⏳ Unconfirmed</text>
+        <g transform="translate(28, 160)">
+          {/* Hourglass icon */}
+          <path d="M2 0h6M2 10h6M2 0v1l3 4-3 4v1M8 0v1l-3 4 3 4v1" className="stroke-yellow-600 dark:stroke-yellow-400" fill="none" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+        <text x="68" y="170" textAnchor="middle" className="fill-foreground text-xs">Unconfirmed</text>
       </g>
 
       {/* Arrow down to mining */}
@@ -104,7 +108,11 @@ export function TransactionLifecycle({ className = '' }: DiagramComponentProps) 
         <rect x="0" y="0" width="150" height="80" rx="8" className="fill-green-500/20 stroke-green-500" strokeWidth="3" />
         <text x="75" y="30" textAnchor="middle" className="fill-green-600 dark:fill-green-400 text-lg font-bold">6. CONFIRMED</text>
         <text x="75" y="50" textAnchor="middle" className="fill-foreground text-xs">Added to block</text>
-        <text x="75" y="70" textAnchor="middle" className="fill-green-600 dark:fill-green-400 text-sm font-bold">1 confirmation ✓</text>
+        <g transform="translate(33, 60)">
+          <text x="0" y="10" className="fill-green-600 dark:fill-green-400 text-sm font-bold">1 confirmation</text>
+          {/* Checkmark icon */}
+          <path d="M82 2l3 3 5-6" className="stroke-green-600 dark:stroke-green-400" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
       </g>
 
       {/* Arrow to more confirmations */}
@@ -118,7 +126,11 @@ export function TransactionLifecycle({ className = '' }: DiagramComponentProps) 
         <rect x="0" y="0" width="150" height="80" rx="8" className="fill-green-600/20 stroke-green-600" strokeWidth="3" />
         <text x="75" y="30" textAnchor="middle" className="fill-green-600 dark:fill-green-400 text-lg font-bold">7. SETTLED</text>
         <text x="75" y="50" textAnchor="middle" className="fill-foreground text-xs">More blocks added</text>
-        <text x="75" y="70" textAnchor="middle" className="fill-green-600 dark:fill-green-400 text-sm font-bold">6+ confirmations ✓✓</text>
+        <g transform="translate(20, 60)">
+          <text x="0" y="10" className="fill-green-600 dark:fill-green-400 text-sm font-bold">6+ confirmations</text>
+          {/* Double checkmark icon */}
+          <path d="M95 2l3 3 5-6M103 2l3 3 5-6" className="stroke-green-600 dark:stroke-green-400" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
       </g>
 
       {/* Time indicators */}
