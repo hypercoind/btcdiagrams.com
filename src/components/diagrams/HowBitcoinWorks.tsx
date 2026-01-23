@@ -18,7 +18,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </text>
 
       {/* Sender */}
-      <g transform="translate(80, 95)">
+      <g transform="translate(55, 95)">
         <circle cx="50" cy="50" r="45" className="fill-primary/20 stroke-primary" strokeWidth="2" />
         <text x="50" y="45" textAnchor="middle" className="fill-foreground text-sm font-semibold">
           Alice
@@ -29,7 +29,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Arrow 1 */}
-      <g transform="translate(180, 125)">
+      <g transform="translate(155, 125)">
         <line x1="0" y1="20" x2="70" y2="20" className="stroke-bitcoin" strokeWidth="3" />
         <polygon points="80,20 70,12 70,28" className="fill-bitcoin" />
         <text x="40" y="10" textAnchor="middle" className="fill-muted-foreground text-xs">
@@ -38,7 +38,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Transaction */}
-      <g transform="translate(270, 100)">
+      <g transform="translate(245, 100)">
         <rect x="0" y="0" width="100" height="90" rx="8" className="fill-accent stroke-bitcoin" strokeWidth="2" />
         <text x="50" y="35" textAnchor="middle" className="fill-foreground text-sm font-semibold">
           Transaction
@@ -52,7 +52,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Arrow 2 */}
-      <g transform="translate(380, 125)">
+      <g transform="translate(355, 125)">
         <line x1="0" y1="20" x2="70" y2="20" className="stroke-bitcoin" strokeWidth="3" />
         <polygon points="80,20 70,12 70,28" className="fill-bitcoin" />
         <text x="40" y="10" textAnchor="middle" className="fill-muted-foreground text-xs">
@@ -61,7 +61,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Network */}
-      <g transform="translate(470, 100)">
+      <g transform="translate(445, 100)">
         <rect x="0" y="0" width="100" height="90" rx="8" className="fill-muted stroke-border" strokeWidth="2" />
         <text x="50" y="35" textAnchor="middle" className="fill-foreground text-sm font-semibold">
           Bitcoin
@@ -75,7 +75,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Arrow 3 */}
-      <g transform="translate(580, 125)">
+      <g transform="translate(555, 125)">
         <line x1="0" y1="20" x2="70" y2="20" className="stroke-bitcoin" strokeWidth="3" />
         <polygon points="80,20 70,12 70,28" className="fill-bitcoin" />
         <text x="40" y="10" textAnchor="middle" className="fill-muted-foreground text-xs">
@@ -84,7 +84,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Receiver */}
-      <g transform="translate(670, 95)">
+      <g transform="translate(645, 95)">
         <circle cx="50" cy="50" r="45" className="fill-secondary/20 stroke-secondary" strokeWidth="2" />
         <text x="50" y="45" textAnchor="middle" className="fill-foreground text-sm font-semibold">
           Bob
@@ -95,7 +95,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Bottom explanation boxes */}
-      <g transform="translate(85, 260)">
+      <g transform="translate(60, 260)">
         <rect x="0" y="0" width="210" height="90" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
         <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           1. Create, Sign, & Broadcast
@@ -111,7 +111,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
         </text>
       </g>
 
-      <g transform="translate(320, 260)">
+      <g transform="translate(295, 260)">
         <rect x="0" y="0" width="210" height="90" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
         <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           2. Verify & Mine
@@ -124,7 +124,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
         </text>
       </g>
 
-      <g transform="translate(555, 260)">
+      <g transform="translate(530, 260)">
         <rect x="0" y="0" width="210" height="90" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
         <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           3. Receive
