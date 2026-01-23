@@ -18,7 +18,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </text>
 
       {/* Sender */}
-      <g transform="translate(80, 120)">
+      <g transform="translate(80, 95)">
         <circle cx="50" cy="50" r="45" className="fill-primary/20 stroke-primary" strokeWidth="2" />
         <text x="50" y="45" textAnchor="middle" className="fill-foreground text-sm font-semibold">
           Alice
@@ -29,8 +29,8 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Arrow 1 */}
-      <g transform="translate(180, 150)">
-        <line x1="0" y1="20" x2="80" y2="20" className="stroke-bitcoin" strokeWidth="3" />
+      <g transform="translate(180, 125)">
+        <line x1="0" y1="20" x2="70" y2="20" className="stroke-bitcoin" strokeWidth="3" />
         <polygon points="80,20 70,12 70,28" className="fill-bitcoin" />
         <text x="40" y="10" textAnchor="middle" className="fill-muted-foreground text-xs">
           Signs TX
@@ -44,7 +44,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
           Transaction
         </text>
         <text x="50" y="55" textAnchor="middle" className="fill-muted-foreground text-xs">
-          0.5 BTC
+          45,000 sats
         </text>
         <text x="50" y="75" textAnchor="middle" className="fill-muted-foreground text-xs">
           + Fee
@@ -52,8 +52,8 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Arrow 2 */}
-      <g transform="translate(380, 150)">
-        <line x1="0" y1="20" x2="80" y2="20" className="stroke-bitcoin" strokeWidth="3" />
+      <g transform="translate(380, 125)">
+        <line x1="0" y1="20" x2="70" y2="20" className="stroke-bitcoin" strokeWidth="3" />
         <polygon points="80,20 70,12 70,28" className="fill-bitcoin" />
         <text x="40" y="10" textAnchor="middle" className="fill-muted-foreground text-xs">
           Broadcast
@@ -70,13 +70,13 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
           Network
         </text>
         <text x="50" y="75" textAnchor="middle" className="fill-muted-foreground text-xs">
-          (Miners)
+          (Nodes + Miners)
         </text>
       </g>
 
       {/* Arrow 3 */}
-      <g transform="translate(580, 150)">
-        <line x1="0" y1="20" x2="80" y2="20" className="stroke-bitcoin" strokeWidth="3" />
+      <g transform="translate(580, 125)">
+        <line x1="0" y1="20" x2="70" y2="20" className="stroke-bitcoin" strokeWidth="3" />
         <polygon points="80,20 70,12 70,28" className="fill-bitcoin" />
         <text x="40" y="10" textAnchor="middle" className="fill-muted-foreground text-xs">
           Confirmed
@@ -84,7 +84,7 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Receiver */}
-      <g transform="translate(670, 120)">
+      <g transform="translate(670, 95)">
         <circle cx="50" cy="50" r="45" className="fill-secondary/20 stroke-secondary" strokeWidth="2" />
         <text x="50" y="45" textAnchor="middle" className="fill-foreground text-sm font-semibold">
           Bob
@@ -95,41 +95,41 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Bottom explanation boxes */}
-      <g transform="translate(80, 260)">
-        <rect x="0" y="0" width="180" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
-        <text x="90" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
+      <g transform="translate(85, 260)">
+        <rect x="0" y="0" width="210" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
+        <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           1. Create & Sign
         </text>
-        <text x="90" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
+        <text x="105" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
           Alice creates a transaction
         </text>
-        <text x="90" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
+        <text x="105" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
           and signs with private key
         </text>
       </g>
 
-      <g transform="translate(310, 260)">
-        <rect x="0" y="0" width="180" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
-        <text x="90" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
+      <g transform="translate(320, 260)">
+        <rect x="0" y="0" width="210" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
+        <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           2. Verify & Mine
         </text>
-        <text x="90" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
-          Network verifies signature
+        <text x="105" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
+          Nodes verify signature & TX
         </text>
-        <text x="90" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
+        <text x="105" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
           Miners add to blockchain
         </text>
       </g>
 
-      <g transform="translate(540, 260)">
-        <rect x="0" y="0" width="180" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
-        <text x="90" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
+      <g transform="translate(555, 260)">
+        <rect x="0" y="0" width="210" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
+        <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           3. Receive
         </text>
-        <text x="90" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
+        <text x="105" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
           Bob receives Bitcoin
         </text>
-        <text x="90" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
+        <text x="105" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
           after confirmations
         </text>
       </g>
