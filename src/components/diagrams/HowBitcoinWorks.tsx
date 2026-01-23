@@ -96,33 +96,36 @@ export function HowBitcoinWorks({ className = '' }: DiagramComponentProps) {
 
       {/* Bottom explanation boxes */}
       <g transform="translate(85, 260)">
-        <rect x="0" y="0" width="210" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
+        <rect x="0" y="0" width="210" height="90" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
         <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
-          1. Create & Sign
+          1. Create, Sign, & Broadcast
         </text>
         <text x="105" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
-          Alice creates a transaction
+          Alice creates a transaction,
         </text>
         <text x="105" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
-          and signs with private key
+          signs with her private key,
+        </text>
+        <text x="105" y="75" textAnchor="middle" className="fill-muted-foreground text-xs">
+          and broadcasts to the network.
         </text>
       </g>
 
       <g transform="translate(320, 260)">
-        <rect x="0" y="0" width="210" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
+        <rect x="0" y="0" width="210" height="90" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
         <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           2. Verify & Mine
         </text>
         <text x="105" y="45" textAnchor="middle" className="fill-muted-foreground text-xs">
-          Nodes verify signature & TX
+          Nodes verify signature & TX,
         </text>
         <text x="105" y="60" textAnchor="middle" className="fill-muted-foreground text-xs">
-          Miners add to blockchain
+          miners add to blockchain
         </text>
       </g>
 
       <g transform="translate(555, 260)">
-        <rect x="0" y="0" width="210" height="80" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
+        <rect x="0" y="0" width="210" height="90" rx="6" className="fill-muted/50 stroke-border" strokeWidth="1" />
         <text x="105" y="25" textAnchor="middle" className="fill-foreground text-xs font-semibold">
           3. Receive
         </text>
