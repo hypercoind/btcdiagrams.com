@@ -4,14 +4,14 @@ export const DIAGRAMS: Diagram[] = [
   {
     slug: 'how-bitcoin-works',
     title: 'How Bitcoin Works',
-    description: 'A simple flow diagram showing the journey of a Bitcoin transaction from sender to receiver.',
+    description: 'The journey of a Bitcoin transaction from sender to receiver.',
     category: 'bitcoin-basics',
     keywords: ['bitcoin', 'transaction', 'basics', 'beginner', 'how it works'],
   },
   {
     slug: 'wallet-types',
     title: 'Wallet Types Comparison',
-    description: 'Compare different types of Bitcoin wallets: hot vs cold, custodial vs non-custodial.',
+    description: 'Compare Bitcoin wallets: hot vs cold.',
     category: 'wallets-security',
     keywords: ['wallet', 'security', 'hot wallet', 'cold wallet', 'hardware wallet', 'custodial'],
   },

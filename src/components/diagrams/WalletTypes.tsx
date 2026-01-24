@@ -19,19 +19,19 @@ export function WalletTypes({ className = '' }: DiagramComponentProps) {
 
       {/* Headers */}
       <g transform="translate(0, 70)">
-        <rect x="200" y="0" width="150" height="40" className="fill-primary" rx="4" />
-        <text x="275" y="26" textAnchor="middle" className="fill-primary-foreground text-sm font-bold">
+        <rect x="184" y="0" width="150" height="40" className="fill-primary" rx="4" />
+        <text x="259" y="26" textAnchor="middle" className="fill-primary-foreground text-sm font-bold">
           Hot Wallets
         </text>
 
-        <rect x="450" y="0" width="150" height="40" className="fill-secondary" rx="4" />
-        <text x="525" y="26" textAnchor="middle" className="fill-secondary-foreground text-sm font-bold">
+        <rect x="386" y="0" width="150" height="40" className="fill-secondary" rx="4" />
+        <text x="461" y="26" textAnchor="middle" className="fill-secondary-foreground text-sm font-bold">
           Cold Wallets
         </text>
       </g>
 
       {/* Row labels */}
-      <g transform="translate(30, 140)">
+      <g transform="translate(52, 140)">
         <text x="0" y="20" className="fill-foreground text-sm font-semibold">Internet</text>
         <text x="0" y="100" className="fill-foreground text-sm font-semibold">Security</text>
         <text x="0" y="180" className="fill-foreground text-sm font-semibold">Convenience</text>
@@ -39,26 +39,17 @@ export function WalletTypes({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Hot Wallet Column */}
-      <g transform="translate(200, 130)">
+      <g transform="translate(184, 130)">
         {/* Internet */}
         <rect x="0" y="0" width="150" height="50" className="fill-red-100 dark:fill-red-900/30 stroke-border" rx="4" />
         <text x="75" y="30" textAnchor="middle" className="fill-foreground text-xs">
-          Always Connected
+          Connected
         </text>
 
         {/* Security */}
         <rect x="0" y="80" width="150" height="50" className="fill-yellow-100 dark:fill-yellow-900/30 stroke-border" rx="4" />
-        <text x="75" y="105" textAnchor="middle" className="fill-foreground text-xs">
-          Medium Risk
-        </text>
-        <g transform="translate(37, 108)">
-          {/* Warning triangle icon */}
-          <path d="M6 1L11 10H1L6 1z" className="stroke-yellow-600 dark:stroke-yellow-400 fill-yellow-100 dark:fill-yellow-900/50" strokeWidth="1" strokeLinejoin="round" />
-          <line x1="6" y1="4" x2="6" y2="6.5" className="stroke-yellow-600 dark:stroke-yellow-400" strokeWidth="1.5" strokeLinecap="round" />
-          <circle cx="6" cy="8" r="0.8" className="fill-yellow-600 dark:fill-yellow-400" />
-        </g>
-        <text x="82" y="120" textAnchor="middle" className="fill-muted-foreground text-xs">
-          Hackable
+        <text x="75" y="110" textAnchor="middle" className="fill-foreground text-xs">
+          Moderate Risk
         </text>
 
         {/* Convenience */}
@@ -67,44 +58,34 @@ export function WalletTypes({ className = '' }: DiagramComponentProps) {
           Very Easy
         </text>
         {/* 3 filled stars */}
-        <g transform="translate(80, 182)">
+        <g transform="translate(80, 180)">
           <path d="M5 0l1.5 3 3.5.5-2.5 2.4.6 3.5L5 7.8 1.9 9.4l.6-3.5L0 3.5 3.5 3z" className="fill-bitcoin" />
           <path d="M17 0l1.5 3 3.5.5-2.5 2.4.6 3.5-3.1-1.6-3.1 1.6.6-3.5-2.5-2.4 3.5-.5z" className="fill-bitcoin" />
           <path d="M29 0l1.5 3 3.5.5-2.5 2.4.6 3.5-3.1-1.6-3.1 1.6.6-3.5-2.5-2.4 3.5-.5z" className="fill-bitcoin" />
         </g>
 
         {/* Best For */}
-        <rect x="0" y="240" width="150" height="70" className="fill-muted stroke-border" rx="4" />
-        <text x="75" y="265" textAnchor="middle" className="fill-foreground text-xs">
+        <rect x="0" y="240" width="150" height="50" className="fill-muted stroke-border" rx="4" />
+        <text x="75" y="260" textAnchor="middle" className="fill-foreground text-xs">
           Daily spending
         </text>
-        <text x="75" y="280" textAnchor="middle" className="fill-foreground text-xs">
+        <text x="75" y="275" textAnchor="middle" className="fill-foreground text-xs">
           Small amounts
-        </text>
-        <text x="75" y="295" textAnchor="middle" className="fill-foreground text-xs">
-          Trading
         </text>
       </g>
 
       {/* Cold Wallet Column */}
-      <g transform="translate(450, 130)">
+      <g transform="translate(386, 130)">
         {/* Internet */}
         <rect x="0" y="0" width="150" height="50" className="fill-green-100 dark:fill-green-900/30 stroke-border" rx="4" />
         <text x="75" y="30" textAnchor="middle" className="fill-foreground text-xs">
-          Offline / Air-gapped
+          100% Offline
         </text>
 
         {/* Security */}
         <rect x="0" y="80" width="150" height="50" className="fill-green-100 dark:fill-green-900/30 stroke-border" rx="4" />
-        <text x="75" y="105" textAnchor="middle" className="fill-foreground text-xs">
-          Very High
-        </text>
-        <g transform="translate(42, 108)">
-          {/* Checkmark icon */}
-          <path d="M2 5l3 3 5-6" className="stroke-green-600 dark:stroke-green-400" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </g>
-        <text x="82" y="120" textAnchor="middle" className="fill-muted-foreground text-xs">
-          Secure
+        <text x="75" y="110" textAnchor="middle" className="fill-foreground text-xs">
+          Very Low Risk
         </text>
 
         {/* Convenience */}
@@ -113,36 +94,33 @@ export function WalletTypes({ className = '' }: DiagramComponentProps) {
           Less Easy
         </text>
         {/* 1 filled star, 2 empty stars */}
-        <g transform="translate(80, 182)">
+        <g transform="translate(80, 180)">
           <path d="M5 0l1.5 3 3.5.5-2.5 2.4.6 3.5L5 7.8 1.9 9.4l.6-3.5L0 3.5 3.5 3z" className="fill-bitcoin" />
           <path d="M17 0l1.5 3 3.5.5-2.5 2.4.6 3.5-3.1-1.6-3.1 1.6.6-3.5-2.5-2.4 3.5-.5z" className="stroke-muted-foreground fill-none" strokeWidth="0.8" />
           <path d="M29 0l1.5 3 3.5.5-2.5 2.4.6 3.5-3.1-1.6-3.1 1.6.6-3.5-2.5-2.4 3.5-.5z" className="stroke-muted-foreground fill-none" strokeWidth="0.8" />
         </g>
 
         {/* Best For */}
-        <rect x="0" y="240" width="150" height="70" className="fill-muted stroke-border" rx="4" />
-        <text x="75" y="265" textAnchor="middle" className="fill-foreground text-xs">
+        <rect x="0" y="240" width="150" height="50" className="fill-muted stroke-border" rx="4" />
+        <text x="75" y="260" textAnchor="middle" className="fill-foreground text-xs">
           Long-term savings
         </text>
-        <text x="75" y="280" textAnchor="middle" className="fill-foreground text-xs">
-          Large amounts
-        </text>
-        <text x="75" y="295" textAnchor="middle" className="fill-foreground text-xs">
-          Inheritance
+        <text x="75" y="275" textAnchor="middle" className="fill-foreground text-xs">
+          Larger amounts
         </text>
       </g>
 
       {/* Examples section */}
-      <g transform="translate(200, 440)">
+      <g transform="translate(184, 445)">
         <text x="75" y="0" textAnchor="middle" className="fill-muted-foreground text-xs">
           Examples: Mobile apps,
         </text>
         <text x="75" y="15" textAnchor="middle" className="fill-muted-foreground text-xs">
-          Desktop wallets, Web wallets
+          Desktop wallets, Browser wallets
         </text>
       </g>
 
-      <g transform="translate(450, 440)">
+      <g transform="translate(386, 445)">
         <text x="75" y="0" textAnchor="middle" className="fill-muted-foreground text-xs">
           Examples: Hardware wallets,
         </text>
@@ -152,7 +130,7 @@ export function WalletTypes({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Key insight box */}
-      <g transform="translate(620, 130)">
+      <g transform="translate(588, 130)">
         <rect x="0" y="0" width="160" height="180" rx="8" className="fill-accent stroke-bitcoin" strokeWidth="2" />
         {/* Lightbulb icon */}
         <g transform="translate(38, 16)">
