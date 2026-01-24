@@ -25,9 +25,9 @@ export const DIAGRAMS: Diagram[] = [
   {
     slug: 'transaction-lifecycle',
     title: 'Transaction Lifecycle',
-    description: 'Step-by-step flow of a Bitcoin transaction from creation to confirmation.',
+    description: 'Step-by-step flow of a Bitcoin transaction from creation to settlement.',
     category: 'how-it-works',
-    keywords: ['transaction', 'mempool', 'confirmation', 'mining', 'broadcast'],
+    keywords: ['transaction', 'mempool', 'confirmation', 'mining', 'broadcast', 'lifecycle', 'settlement'],
   },
   {
     slug: 'supply-schedule',
