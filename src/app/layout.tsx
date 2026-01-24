@@ -30,6 +30,23 @@ export const metadata: Metadata = {
     title: "BTCDiagrams - Educational Bitcoin Infographics",
     description: "Visual guides to understand Bitcoin.",
   },
+  appleWebApp: {
+    title: 'BTCDiagrams',
+    statusBarStyle: 'black-translucent',
+  },
+  icons: {
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#F7931A',
+      },
+    ],
+  },
+  other: {
+    'msapplication-TileColor': '#F7931A',
+  },
+  manifest: '/manifest.webmanifest',
 };
 
 export default function RootLayout({
