@@ -10,10 +10,6 @@ export default function HomePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
           Bitcoin Explained <span className="text-bitcoin">Visually</span>
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Clear, educational infographics that help you understand Bitcoin.
-          No jargon, no hype—just simple visual explanations.
-        </p>
       </div>
 
       {/* Gallery */}
