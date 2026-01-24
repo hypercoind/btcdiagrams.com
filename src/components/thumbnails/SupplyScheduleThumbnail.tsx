@@ -12,7 +12,7 @@ export function SupplyScheduleThumbnail({ className = '' }: ThumbnailComponentPr
       <rect width="200" height="120" className="fill-card" />
 
       {/* Simple supply curve */}
-      <g transform="translate(20, 20)">
+      <g transform="translate(5, 20)">
         {/* Y axis */}
         <line x1="20" y1="10" x2="20" y2="70" className="stroke-border" strokeWidth="1" />
         {/* X axis */}
@@ -24,14 +24,14 @@ export function SupplyScheduleThumbnail({ className = '' }: ThumbnailComponentPr
 
         {/* Supply curve */}
         <path
-          d="M 20 70 L 20 50 L 50 50 L 50 35 L 80 35 L 80 25 L 110 25 L 110 20 L 140 18 L 160 16"
+          d="M 20 70 L 20 50 L 50 50 L 50 35 L 80 35 L 80 25 L 110 25 L 110 20 L 140 20 L 140 16 L 160 16"
           className="fill-none stroke-bitcoin"
           strokeWidth="2"
         />
 
         {/* Area fill */}
         <path
-          d="M 20 70 L 20 50 L 50 50 L 50 35 L 80 35 L 80 25 L 110 25 L 110 20 L 140 18 L 160 16 L 160 70 Z"
+          d="M 20 70 L 20 50 L 50 50 L 50 35 L 80 35 L 80 25 L 110 25 L 110 20 L 140 20 L 140 16 L 160 16 L 160 70 Z"
           className="fill-bitcoin/10"
         />
 
@@ -39,11 +39,8 @@ export function SupplyScheduleThumbnail({ className = '' }: ThumbnailComponentPr
         <circle cx="50" cy="50" r="3" className="fill-bitcoin" />
         <circle cx="80" cy="35" r="3" className="fill-bitcoin" />
         <circle cx="110" cy="25" r="3" className="fill-bitcoin" />
+        <circle cx="140" cy="20" r="3" className="fill-bitcoin" />
       </g>
-
-      <text x="100" y="108" textAnchor="middle" className="fill-muted-foreground text-xs">
-        Halvings → 21M cap
-      </text>
     </svg>
   );
 }
