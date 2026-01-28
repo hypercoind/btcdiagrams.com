@@ -18,7 +18,7 @@ export const DIAGRAMS: Diagram[] = [
   {
     slug: 'blockchain-structure',
     title: 'Blockchain Structure',
-    description: 'Visual breakdown of how blocks are chained together to form the Bitcoin blockchain.',
+    description: 'Visual breakdown of how blocks are linked together to form the Bitcoin blockchain.',
     category: 'how-it-works',
     keywords: ['blockchain', 'blocks', 'chain', 'structure', 'hash', 'mining'],
   },

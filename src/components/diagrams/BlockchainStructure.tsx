@@ -27,10 +27,10 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
         </text>
 
         <text x="15" y="65" className="fill-muted-foreground text-xs">Hash:</text>
-        <text x="15" y="80" className="fill-foreground text-xs font-mono">0000abc...</text>
+        <text x="15" y="80" fill="#e67e22" className="text-xs font-mono font-bold">00000000839a8e...</text>
 
         <text x="15" y="105" className="fill-muted-foreground text-xs">Prev Hash:</text>
-        <text x="15" y="120" className="fill-foreground text-xs font-mono">0000000...</text>
+        <text x="15" y="120" className="fill-foreground text-xs font-mono">000000000019d6...</text>
         <text x="15" y="135" className="fill-muted-foreground text-xs">(Genesis)</text>
 
         <line x1="15" y1="150" x2="165" y2="150" className="stroke-border" strokeWidth="1" />
@@ -41,7 +41,7 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
 
       {/* Chain link 1-2 */}
       <g transform="translate(230, 170)">
-        <line x1="0" y1="0" x2="50" y2="0" className="stroke-bitcoin" strokeWidth="4" />
+        <line x1="0" y1="0" x2="40" y2="0" className="stroke-bitcoin" strokeWidth="4" />
         <polygon points="50,0 40,-8 40,8" className="fill-bitcoin" />
       </g>
 
@@ -55,10 +55,10 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
         </text>
 
         <text x="15" y="65" className="fill-muted-foreground text-xs">Hash:</text>
-        <text x="15" y="80" className="fill-foreground text-xs font-mono">0000def...</text>
+        <text x="15" y="80" fill="#3b82f6" className="text-xs font-mono font-bold">000000006a625f...</text>
 
         <text x="15" y="105" className="fill-muted-foreground text-xs">Prev Hash:</text>
-        <text x="15" y="120" className="fill-bitcoin text-xs font-mono font-bold">0000abc...</text>
+        <text x="15" y="120" fill="#e67e22" className="text-xs font-mono font-bold">00000000839a8e...</text>
         <text x="15" y="135" className="fill-muted-foreground text-xs">(Links to #1)</text>
 
         <line x1="15" y1="150" x2="165" y2="150" className="stroke-border" strokeWidth="1" />
@@ -69,7 +69,7 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
 
       {/* Chain link 2-3 */}
       <g transform="translate(470, 170)">
-        <line x1="0" y1="0" x2="50" y2="0" className="stroke-bitcoin" strokeWidth="4" />
+        <line x1="0" y1="0" x2="40" y2="0" className="stroke-bitcoin" strokeWidth="4" />
         <polygon points="50,0 40,-8 40,8" className="fill-bitcoin" />
       </g>
 
@@ -83,10 +83,10 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
         </text>
 
         <text x="15" y="65" className="fill-muted-foreground text-xs">Hash:</text>
-        <text x="15" y="80" className="fill-foreground text-xs font-mono">0000ghi...</text>
+        <text x="15" y="80" className="fill-foreground text-xs font-mono">0000000082b501...</text>
 
         <text x="15" y="105" className="fill-muted-foreground text-xs">Prev Hash:</text>
-        <text x="15" y="120" className="fill-bitcoin text-xs font-mono font-bold">0000def...</text>
+        <text x="15" y="120" fill="#3b82f6" className="text-xs font-mono font-bold">000000006a625f...</text>
         <text x="15" y="135" className="fill-muted-foreground text-xs">(Links to #2)</text>
 
         <line x1="15" y1="150" x2="165" y2="150" className="stroke-border" strokeWidth="1" />
@@ -103,63 +103,83 @@ export function BlockchainStructure({ className = '' }: DiagramComponentProps) {
       </g>
 
       {/* Explanation boxes */}
-      <g transform="translate(50, 310)">
-        <rect x="0" y="0" width="220" height="100" rx="6" className="fill-accent stroke-bitcoin" strokeWidth="2" />
-        {/* Chain link icon */}
-        <g transform="translate(62, 12)">
-          <path d="M4 3H2C0.9 3 0 3.9 0 5s.9 2 2 2h2M6 3h2c1.1 0 2 .9 2 2s-.9 2-2 2H6M3 5h4" className="stroke-bitcoin" fill="none" strokeWidth="1.5" strokeLinecap="round" />
+      <g transform="translate(30, 310)">
+        <rect x="0" y="0" width="165" height="100" rx="6" className="fill-accent stroke-bitcoin" strokeWidth="2" />
+        {/* Hash/fingerprint icon */}
+        <g transform="translate(32, 12)">
+          <text x="0" y="10" className="fill-bitcoin text-sm font-bold">#</text>
         </g>
-        <text x="118" y="25" textAnchor="middle" className="fill-bitcoin text-sm font-bold">
-          The Chain
+        <text x="90" y="25" textAnchor="middle" className="fill-bitcoin text-sm font-bold">
+          Hashing
         </text>
-        <text x="110" y="50" textAnchor="middle" className="fill-foreground text-xs">
-          Each block contains the hash
+        <text x="82" y="50" textAnchor="middle" className="fill-foreground text-xs">
+          A hash is a unique digital
         </text>
-        <text x="110" y="65" textAnchor="middle" className="fill-foreground text-xs">
-          of the previous block,
+        <text x="82" y="65" textAnchor="middle" className="fill-foreground text-xs">
+          fingerprint of all block data.
         </text>
-        <text x="110" y="80" textAnchor="middle" className="fill-foreground text-xs">
-          creating an unbreakable chain.
+        <text x="82" y="80" textAnchor="middle" className="fill-foreground text-xs">
+          Change anything = new hash.
         </text>
       </g>
 
-      <g transform="translate(290, 310)">
-        <rect x="0" y="0" width="220" height="100" rx="6" className="fill-muted stroke-border" strokeWidth="2" />
+      <g transform="translate(210, 310)">
+        <rect x="0" y="0" width="165" height="100" rx="6" className="fill-muted stroke-border" strokeWidth="2" />
+        {/* Chain link icon */}
+        <g transform="translate(34, 12)">
+          <path d="M4 3H2C0.9 3 0 3.9 0 5s.9 2 2 2h2M6 3h2c1.1 0 2 .9 2 2s-.9 2-2 2H6M3 5h4" className="stroke-foreground" fill="none" strokeWidth="1.5" strokeLinecap="round" />
+        </g>
+        <text x="90" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
+          The Chain
+        </text>
+        <text x="82" y="50" textAnchor="middle" className="fill-foreground text-xs">
+          Each block contains the
+        </text>
+        <text x="82" y="65" textAnchor="middle" className="fill-foreground text-xs">
+          hash of the previous block,
+        </text>
+        <text x="82" y="80" textAnchor="middle" className="fill-foreground text-xs">
+          linking them together.
+        </text>
+      </g>
+
+      <g transform="translate(390, 310)">
+        <rect x="0" y="0" width="165" height="100" rx="6" className="fill-muted stroke-border" strokeWidth="2" />
         {/* Lock icon */}
-        <g transform="translate(52, 12)">
+        <g transform="translate(34, 12)">
           <rect x="1" y="4" width="8" height="6" rx="1" className="stroke-foreground" fill="none" strokeWidth="1.2" />
           <path d="M3 4V2.5C3 1.1 4 0 5 0s2 1.1 2 2.5V4" className="stroke-foreground" fill="none" strokeWidth="1.2" strokeLinecap="round" />
         </g>
-        <text x="118" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
+        <text x="90" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
           Immutability
         </text>
-        <text x="110" y="50" textAnchor="middle" className="fill-foreground text-xs">
+        <text x="82" y="50" textAnchor="middle" className="fill-foreground text-xs">
           Changing any block would
         </text>
-        <text x="110" y="65" textAnchor="middle" className="fill-foreground text-xs">
+        <text x="82" y="65" textAnchor="middle" className="fill-foreground text-xs">
           change its hash, breaking
         </text>
-        <text x="110" y="80" textAnchor="middle" className="fill-foreground text-xs">
+        <text x="82" y="80" textAnchor="middle" className="fill-foreground text-xs">
           the link to the next block.
         </text>
       </g>
 
-      <g transform="translate(530, 310)">
-        <rect x="0" y="0" width="220" height="100" rx="6" className="fill-muted stroke-border" strokeWidth="2" />
+      <g transform="translate(570, 310)">
+        <rect x="0" y="0" width="165" height="100" rx="6" className="fill-muted stroke-border" strokeWidth="2" />
         {/* Pickaxe icon */}
-        <g transform="translate(68, 12)">
+        <g transform="translate(40, 12)">
           <path d="M1 9L5 5M5 5L9 1M7 1L9 3M5 1L3 3" className="stroke-foreground" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </g>
-        <text x="118" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
+        <text x="90" y="25" textAnchor="middle" className="fill-foreground text-sm font-bold">
           Mining
         </text>
-        <text x="110" y="50" textAnchor="middle" className="fill-foreground text-xs">
+        <text x="82" y="50" textAnchor="middle" className="fill-foreground text-xs">
           Miners compete to find a
         </text>
-        <text x="110" y="65" textAnchor="middle" className="fill-foreground text-xs">
+        <text x="82" y="65" textAnchor="middle" className="fill-foreground text-xs">
           valid hash starting with
         </text>
-        <text x="110" y="80" textAnchor="middle" className="fill-foreground text-xs">
+        <text x="82" y="80" textAnchor="middle" className="fill-foreground text-xs">
           zeros (proof of work).
         </text>
       </g>
