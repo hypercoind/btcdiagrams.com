@@ -20,7 +20,7 @@ export interface Diagram {
 export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'bitcoin-basics',
-    label: 'How Bitcoin Works',
+    label: 'How It Works',
     description: 'Fundamental and technical concepts explained simply',
   },
   {

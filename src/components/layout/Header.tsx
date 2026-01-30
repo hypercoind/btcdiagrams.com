@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="border-b border-border bg-card">
       <Container>
-        <div className="flex items-center justify-between h-16">
+        <div className="relative flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 group">
             <svg
               width="32"
@@ -23,12 +23,13 @@ export function Header() {
               <circle cx="48" cy="14" r="5" fill="#fff"/>
             </svg>
             <span className="font-semibold text-lg group-hover:text-bitcoin transition-colors">
-              Bitcoin Diagrams
-            </span>
-            <span className="hidden sm:inline text-sm text-muted-foreground">
-              — Bitcoin Explained <span className="text-bitcoin">Visually</span>
+              BTC Diagrams
             </span>
           </Link>
+
+          <span className="absolute left-1/2 -translate-x-1/2 hidden md:block text-lg font-semibold text-foreground">
+            Bitcoin Explained <span className="text-bitcoin">Visually</span>
+          </span>
 
           <nav className="flex items-center gap-4">
             <Link

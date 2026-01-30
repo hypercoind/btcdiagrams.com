@@ -15,23 +15,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BTCDiagrams - Educational Bitcoin Infographics",
+  title: "Bitcoin Diagrams",
   description: "Visual guides to understand Bitcoin. Clear, educational infographics explaining how Bitcoin works, wallets, transactions, and economics.",
   keywords: ["Bitcoin", "cryptocurrency", "infographics", "education", "blockchain", "wallet", "transactions"],
   openGraph: {
-    title: "BTCDiagrams - Educational Bitcoin Infographics",
+    title: "Bitcoin Diagrams",
     description: "Visual guides to understand Bitcoin. Clear, educational infographics explaining how Bitcoin works.",
     type: "website",
     locale: "en_US",
-    siteName: "BTCDiagrams",
+    siteName: "Bitcoin Diagrams",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BTCDiagrams - Educational Bitcoin Infographics",
+    title: "Bitcoin Diagrams",
     description: "Visual guides to understand Bitcoin.",
   },
   appleWebApp: {
-    title: 'BTCDiagrams',
+    title: 'Bitcoin Diagrams',
     statusBarStyle: 'black-translucent',
   },
   icons: {
