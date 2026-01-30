@@ -19,14 +19,14 @@ export const DIAGRAMS: Diagram[] = [
     slug: 'blockchain-structure',
     title: 'Blockchain Structure',
     description: 'Visual breakdown of how blocks are linked together to form the Bitcoin blockchain.',
-    category: 'how-it-works',
+    category: 'bitcoin-basics',
     keywords: ['blockchain', 'blocks', 'chain', 'structure', 'hash', 'mining'],
   },
   {
     slug: 'transaction-lifecycle',
     title: 'Transaction Lifecycle',
     description: 'Step-by-step flow of a Bitcoin transaction from creation to settlement.',
-    category: 'how-it-works',
+    category: 'bitcoin-basics',
     keywords: ['transaction', 'mempool', 'confirmation', 'mining', 'broadcast', 'lifecycle', 'settlement'],
   },
   {

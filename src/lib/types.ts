@@ -1,7 +1,6 @@
 export type Category =
   | 'bitcoin-basics'
   | 'wallets-security'
-  | 'how-it-works'
   | 'economics';
 
 export interface CategoryInfo {
@@ -21,18 +20,13 @@ export interface Diagram {
 export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'bitcoin-basics',
-    label: 'Bitcoin Basics',
-    description: 'Fundamental concepts for beginners',
+    label: 'How Bitcoin Works',
+    description: 'Fundamental and technical concepts explained simply',
   },
   {
     id: 'wallets-security',
     label: 'Wallets & Security',
     description: 'How to store and protect your Bitcoin',
-  },
-  {
-    id: 'how-it-works',
-    label: 'How It Works',
-    description: 'Technical concepts explained simply',
   },
   {
     id: 'economics',

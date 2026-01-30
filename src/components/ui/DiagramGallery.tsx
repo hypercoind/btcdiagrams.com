@@ -28,9 +28,18 @@ export function DiagramGallery({ diagrams }: DiagramGalleryProps) {
           No diagrams found in this category.
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredDiagrams.map((diagram) => (
-            <DiagramCard key={diagram.slug} diagram={diagram} />
+        <div className="flex flex-col items-center max-w-[580px] mx-auto">
+          {filteredDiagrams.map((diagram, index) => (
+            <div key={diagram.slug} className="w-full">
+              {index > 0 && (
+                <div className="flex flex-col items-center py-1">
+                  <div className="w-px h-3 bg-border" />
+                  <div className="w-3 h-3 rounded-full border-2 border-bitcoin bg-card" />
+                  <div className="w-px h-3 bg-border" />
+                </div>
+              )}
+              <DiagramCard diagram={diagram} />
+            </div>
           ))}
         </div>
       )}
