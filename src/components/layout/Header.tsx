@@ -25,6 +25,9 @@ export function Header() {
             <span className="font-semibold text-lg group-hover:text-bitcoin transition-colors">
               Bitcoin Diagrams
             </span>
+            <span className="hidden sm:inline text-sm text-muted-foreground">
+              — Bitcoin Explained <span className="text-bitcoin">Visually</span>
+            </span>
           </Link>
 
           <nav className="flex items-center gap-4">

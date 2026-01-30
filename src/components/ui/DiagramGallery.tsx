@@ -1,8 +1,4 @@
-'use client';
-
-import { useState } from 'react';
-import { Diagram, Category } from '@/lib/types';
-import { CategoryFilter } from './CategoryFilter';
+import { Diagram, CATEGORIES } from '@/lib/types';
 import { DiagramCard } from './DiagramCard';
 
 interface DiagramGalleryProps {
@@ -10,39 +6,35 @@ interface DiagramGalleryProps {
 }
 
 export function DiagramGallery({ diagrams }: DiagramGalleryProps) {
-  const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');
-
-  const filteredDiagrams = selectedCategory === 'all'
-    ? diagrams
-    : diagrams.filter(d => d.category === selectedCategory);
+  const diagramsByCategory = CATEGORIES.map(category => ({
+    category,
+    diagrams: diagrams.filter(d => d.category === category.id),
+  })).filter(group => group.diagrams.length > 0);
 
   return (
-    <div className="space-y-8">
-      <CategoryFilter
-        selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
-      />
-
-      {filteredDiagrams.length === 0 ? (
-        <div className="text-center py-12 text-muted-foreground">
-          No diagrams found in this category.
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {diagramsByCategory.map(({ category, diagrams: catDiagrams }) => (
+        <div key={category.id} className="flex flex-col">
+          <div className="mb-4 text-center">
+            <h2 className="text-lg font-semibold text-foreground">{category.label}</h2>
+            <p className="text-sm text-muted-foreground">{category.description}</p>
+          </div>
+          <div className="flex flex-col items-center">
+            {catDiagrams.map((diagram, index) => (
+              <div key={diagram.slug} className="w-full">
+                {index > 0 && (
+                  <div className="flex flex-col items-center py-1">
+                    <div className="w-px h-3 bg-border" />
+                    <div className="w-3 h-3 rounded-full border-2 border-bitcoin bg-card" />
+                    <div className="w-px h-3 bg-border" />
+                  </div>
+                )}
+                <DiagramCard diagram={diagram} />
+              </div>
+            ))}
+          </div>
         </div>
-      ) : (
-        <div className="flex flex-col items-center max-w-[580px] mx-auto">
-          {filteredDiagrams.map((diagram, index) => (
-            <div key={diagram.slug} className="w-full">
-              {index > 0 && (
-                <div className="flex flex-col items-center py-1">
-                  <div className="w-px h-3 bg-border" />
-                  <div className="w-3 h-3 rounded-full border-2 border-bitcoin bg-card" />
-                  <div className="w-px h-3 bg-border" />
-                </div>
-              )}
-              <DiagramCard diagram={diagram} />
-            </div>
-          ))}
-        </div>
-      )}
+      ))}
     </div>
   );
 }
