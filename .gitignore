@@ -42,3 +42,8 @@ next-env.d.ts
 
 # Claude Code local settings
 /.claude/
+
+# Kubernetes
+k8s/values-secrets.yaml
+k8s/charts/
+.skaffold-profile

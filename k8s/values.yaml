@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: btcdiagrams
+  tag: latest
+  pullPolicy: Never
+
+service:
+  port: 80
+
+ingress:
+  enabled: true
+  host: btcdiagrams.local
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi

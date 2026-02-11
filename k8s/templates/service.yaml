@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "btcdiagrams.fullname" . }}
+  labels:
+    {{- include "btcdiagrams.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 80
+      protocol: TCP
+  selector:
+    {{- include "btcdiagrams.selectorLabels" . | nindent 4 }}

@@ -1,0 +1,20 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: btcdiagrams
+build:
+  artifacts:
+    - image: btcdiagrams
+      docker:
+        dockerfile: Dockerfile
+  local:
+    push: false
+deploy:
+  helm:
+    releases:
+      - name: btcdiagrams
+        chartPath: ./k8s
+        namespace: btcdiagrams
+        createNamespace: true
+profiles:
+  - name: dev
